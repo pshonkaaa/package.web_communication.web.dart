@@ -1,0 +1,25 @@
+name: web_communication
+description:
+version: 0.0.1
+homepage:
+publish_to: none
+
+environment:
+  sdk: ">=2.19.0 <3.0.0"
+
+dependencies:
+  intl: any
+  meta: any
+  logging: any
+  logger: any
+
+  synchronized: any
+
+  true_core:
+    git:
+      url: https://github.com/pshonkaaa/package.true_core.dart.git
+
+  web_chrome_api:
+    git:
+      url: https://github.com/pshonkaaa/package.web_chrome_api.web.dart.git
+  
