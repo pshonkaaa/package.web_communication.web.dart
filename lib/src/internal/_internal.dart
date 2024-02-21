@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:logger/logger.dart';
-import 'package:foundation/library.dart';
+import 'package:pshondation/library.dart';
 import 'package:web_communication/library.dart';
 import 'package:web_communication/src/internal/packet_mixin.dart';
 

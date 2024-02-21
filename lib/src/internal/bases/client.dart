@@ -1,4 +1,4 @@
-import 'package:foundation/library.dart';
+import 'package:pshondation/library.dart';
 import 'package:web_communication/library.dart';
 import 'package:web_communication/src/internal/_internal.dart';
 import 'package:web_communication/src/internal/constants.dart';
