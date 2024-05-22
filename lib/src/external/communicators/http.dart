@@ -9,6 +9,7 @@ import 'package:web_communication/src/internal/bases/server.dart';
 
 class _HttpToServerSocket extends BaseSocket {
   _HttpToServerSocket({
+    required super.address,
     required super.communicator,
   });
 }
@@ -36,6 +37,7 @@ class HttpClientCommunicator extends BaseClientCommunicator implements ClientCom
       throw Exception('chrome.runtime not supported');
 
     final socket = _HttpToServerSocket(
+      address: this.address,
       communicator: this,
     );
 
@@ -133,6 +135,7 @@ class HttpClientCommunicator extends BaseClientCommunicator implements ClientCom
 class _HttpToClientSocket extends BaseSocket {
   final SendResponseFunction jsSendResponse;
   _HttpToClientSocket({
+    required super.address,
     required super.communicator,
     required this.jsSendResponse,
   });
@@ -163,7 +166,10 @@ class HttpServerCommunicator extends BaseServerCommunicator implements ServerCom
   @override
   Future<void> openDelegate() async {
     _jsOnMessage = _jsOnMessageExternal = allowInterop((data, sender, sendResponse) async {
-      final socket = _HttpToClientSocket(  
+      final socket = _HttpToClientSocket(
+        address: Uri(
+          host: '${sender.id}',
+        ),
         communicator: this,
         jsSendResponse: sendResponse,
       );

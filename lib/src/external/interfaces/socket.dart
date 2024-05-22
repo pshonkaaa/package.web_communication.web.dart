@@ -2,6 +2,8 @@ import 'package:web_communication/library.dart';
 import 'package:web_communication/src/internal/constants.dart';
 
 abstract class Socket {
+  Uri get address;
+
   bool get connected;
 
   bool get closed;

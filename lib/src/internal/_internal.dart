@@ -19,6 +19,7 @@ abstract class BaseSocket extends BaseAsyncStateable implements Socket {
   static const TAG = 'BaseSocket';
 
   BaseSocket({
+    required this.address,
     required this.communicator,
   }) : id = communicator.controller.getNewSocketId(),
     side = communicator is BaseServerCommunicator ? ESocketSide.server : ESocketSide.client;
@@ -54,6 +55,9 @@ abstract class BaseSocket extends BaseAsyncStateable implements Socket {
     await super.dispose();
   }
   
+
+  @override
+  final Uri address;
   
   @override
   bool get connected => _connected;

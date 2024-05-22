@@ -9,15 +9,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.1.1"
-  pshondation:
-    dependency: "direct main"
-    description:
-      path: "."
-      ref: HEAD
-      resolved-ref: cea8c35047443264471b09abd48422aa20ed9014
-      url: "https://github.com/pshonkaaa/package.pshondation.dart.git"
-    source: git
-    version: "0.1.0"
   intl:
     dependency: "direct main"
     description:
@@ -66,6 +57,15 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.9.0"
+  pshondation:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: HEAD
+      resolved-ref: d10cf60a2e3adc12a949400e0662db5bddecc475
+      url: "https://github.com/pshonkaaa/package.pshondation.dart.git"
+    source: git
+    version: "0.1.0"
   synchronized:
     dependency: "direct main"
     description:
@@ -79,7 +79,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: aac04b96017317719b1c443800c251b41503f007
+      resolved-ref: "9ca890fab71b7e86d3c59e661b1e715e1cd7a757"
       url: "https://github.com/pshonkaaa/package.web_chrome_api.web.dart.git"
     source: git
     version: "0.0.2"

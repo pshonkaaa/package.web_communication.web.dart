@@ -9,6 +9,7 @@ import 'package:web_communication/src/internal/bases/server.dart';
 
 class _Socket extends BaseSocket {
   _Socket({
+    required super.address,
     required super.communicator,
     required this.port,
   });
@@ -46,6 +47,7 @@ class SocketClientCommunicator extends BaseClientCommunicator {
     final port = chrome.runtime!.connect(extensionId, ConnectInfo(name: handshake));
     
     final socket = _Socket(
+      address: address,
       communicator: this,
       port: port,
     );
@@ -131,6 +133,9 @@ class SocketServerCommunicator extends BaseServerCommunicator {
         return;
         
       final socket = _Socket(
+        address: Uri(
+          host: '${port.sender!.id}',
+        ),
         communicator: this,
         port: port,
       );
